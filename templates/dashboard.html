@@ -1,0 +1,189 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="alert alert-warning" role="alert">
+  Statistics about bank checks usage in Tunisia
+</div>
+<div class="card card-chart">
+  <div class="card-body">
+    <h4 class="card-title">
+      • The cheque is a popular cashless payment instrument, used by both consumers and companies. Cheques account for half of all cashless payments in value terms.
+      <br>• Cheques are truncated into electronic items before being settled via SIBTEL. Funds are available within 24 hours.
+      <br>• In 2019, 26,159 thousand cheques were processed (26,123 thousand in 2018), with a value of TND 101,279.1 million (TND 93,380.1 million in 2018).
+    </h4>
+  </div>
+</div>
+<div class="card card-chart">
+  <div class="card-body">
+    <h4 class="card-title">
+       • 45% of the financial transactions in tunisia are done by bank checks, which shows that bank checks still have tunisians trust.
+      <br> • The average number of checks used every year reaches 26 millions in 2020.
+      <br> • 55% des montants payés dans le cadre des différentes transactions, durant les trois dernières années, ont été effectués par chèques avec un taux de rejet des chèques ne dépasse pas 2%
+    </h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <div class="card card-chart">
+      <div class="card-header card-header-success">
+        <embed type="image/svg+xml" src={{bar_chart_tn|safe}} style='max-width:800px'/>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Number of checks by amount</h4>
+        <p class="card-category">
+          The number of checks with a value under 20TND does not reach 180 thousand checks (representing a global value of 3 millions TND), however the checks with an amount between 100 TND and 20 TND, are in the range of 4 millions  (a value of 300 millions TND)
+          <span class="text-success"></span> 
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons"></i> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6 col-md-12">
+    <div class="card card-chart">
+      <div class="card-header card-header-success">
+        <!--<div class="ct-chart" id="dailySalesChart"></div>-->
+        <embed type="image/svg+xml" src={{graph_data_tn|safe}} style='max-width:800px'/>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">VOLUME DES TRANSACTIONS PAR MOYENS DE PAIEMENT (EN MDT)</h4>
+        <p class="card-category">
+          <span class="text-success"></span> 
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons"></i> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title"></h4>
+        <p class="card-category">VOLUME DES TRANSACTIONS PAR MOYENS DE PAIEMENT (EN MDT)</p>
+      </div>
+      <div class="card-body table-responsive">
+        <table class="table table-hover">
+          <thead class="text-warning">
+            <th>Indicators</th>
+            <th>MaY</th>
+            <th>June</th>
+            <th>July</th>
+            <th>Aug</th>
+            <th>Sept</th>
+            <th>Oct</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Checks</td>
+              <td>5067,6</td>
+              <td>7815,8</td>
+              <td>8226,2</td>
+              <td>7105,2</td>
+              <td>8855,3</td>
+              <td>8363,5</td>
+            </tr>
+            <tr>
+              <td>Effects</td>
+              <td>1514,0</td>
+              <td>2205,9</td>
+              <td>1604,0</td>
+              <td>2114,2</td>
+              <td>2068,5</td>
+              <td>1807,5</td>
+            </tr>
+            <tr>
+              <td>Wire Transfers</td>
+              <td>2681,9</td>
+              <td>3085,9</td>
+              <td>3492,2</td>
+              <td>2773,2</td>
+              <td>3224,2</td>
+              <td>3319,5</td>
+            </tr>
+            <tr>
+              <td>Direct debit</td>
+              <td>275,3</td>
+              <td>2194,2</td>
+              <td>1451,2</td>
+              <td>276,7</td>
+              <td>2547,2</td>
+              <td>630,2</td>
+            </tr>
+            <tr>
+              <td>Credit card</td>
+              <td>1231,2</td>
+              <td>1418,0</td>
+              <td>1558,0</td>
+              <td>1482,1</td>
+              <td>1355,2</td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>E-Pay</td>
+              <td>20,4</td>
+              <td>24,0</td>
+              <td>31,7</td>
+              <td>25,5</td>
+              <td>23,4</td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+      <div class="card card-chart">
+        <div class="card-header card-header-success">
+          <!--<div class="ct-chart" id="dailySalesChart"></div>-->
+          <embed type="image/svg+xml" src={{graph_data|safe}} style='max-width:500px'/>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Trends in noncash payments, by number, 2000–18</h4>
+          <p class="card-category">
+            <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> 
+            In 2018, the number of non-prepaid debit card and credit card payments were each well above the number of either prepaid debit card payments, ACH debit transfers, ACH credit transfers, or check payments.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons"></i> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <div class="card card-chart">
+        <div class="card-header card-header-success">
+          <embed type="image/svg+xml" src={{graph_data2|safe}} style='max-width:500px'/>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Trends in noncash payments, by value, 2000–18</h4>
+          <p class="card-category">
+            <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> 
+            The order by value of the different noncash payment types is nearly the reverse of order by number, with ACH credit transfers, ACH debit transfers, and checks each registering substantially higher total values than the three card types in all years of the study since 2000
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons"></i> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="alert alert-warning ">
+
+    Autocorrection of bank checks
+</div>
+
+<div class="row">  
+  <form action='/predict' method="post" enctype="multipart/form-data" class="col s12">
+    <div class="container">
+      <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <ul>
+          {% for message in messages %}
+              <li>
+          <h4> Montant En Lettre :  </h4>    {{ message }}
+              </li>
+          {% endfor %}
+        </ul>
+          {% endif %}
+        {% endwith %}
+      </p>
+      <center>
+      <div class="input-field col s12 center-align">
+        <label for="check_image"><b>Choose check image : </b></label>
+        <input placeholder="" name="file" id="file" type="file" class="file-field">
+      </div>
+    </div>
+   
+     <div class="container" >
+      <div class="row" >
+        <button type="submit" class="btn btn-warning btn-sm btn-round" style="left: 40%;">Check Autocorrection</button>
+      </div>
+    </div>
+  </center>
+  
+  </form>
+</div>
+
+
+{% endblock content %}

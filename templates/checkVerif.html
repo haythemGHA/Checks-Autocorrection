@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="alert alert-warning ">
+  Autocorrection of bank checks
+</div>
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row">
+        <form action='/predict' method="post" enctype="multipart/form-data" class="col s12">
+          <div class="row">
+          <table>
+            <tr>
+              <td><h2> Legal amount </h2></td>
+              <td><h2> Courtesy amount </h2></td>
+            </tr>
+            <tr>
+              <td><img src="{{url_for('static', filename='legal.png')}}"  width="500 pixel" height="80 pixel"></td>
+              <td><img src="{{ url_for('static', filename='courtesyamt.png')  }}"  width="500 pixel" height="80 pixel"></td>
+            </tr>
+            <tr>
+              <td> <h3 style="color:white;"> <B> Extracted Legal Amount : </B> {{lettre}}</h3></td>
+             <td> <h3 style="color:white;"> <B> Extracted Courtesy Amount : </B>  {{chiffre}}</h3>
+             </td>
+
+            </tr>
+
+          </table>
+ 
+
+
+</br>
+</br>
+
+</br>
+<table>
+  <tr>
+    <h3 style="color:white;"> <B>  Your check is : </B> </h3> 
+    <h3 style="color:red;">  {{comparaison}} </h3>
+  </tr>
+  <h3 style="color:white;"> <B>  Detected amount in this check  </B> </h3>
+  <h3 style="color:red;">  {{lettre}} </h3>
+  <tr>
+  </tr>
+</table>
+
+
+       
+        </div>
+     
+      </form>
+    </div>
+    </div>
+  </div>
+
+  
+{% endblock content %}
